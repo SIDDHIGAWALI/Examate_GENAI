@@ -14,3 +14,21 @@ Course details are buried in very long AICTE PDFs with course tables, module lis
 ## Data Source
 - AICTE UG CSE model curriculum (PDF): https://www.aicte.gov.in/sites/default/files/Updated-AICTE%20-%20UG%20CSE.pdf
 - AICTE Mechanical Engineering model curriculum (PDF): https://aicte.gov.in/sites/default/files/Final_Mechanical%20Engg.pdf
+
+
+
+
+## How to run
+```
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python -m app.fetch        # download PDFs into data/raw/
+python -m app.ingest       # build data/records.json
+uvicorn app.main:app --reload
+```
+Open http://127.0.0.1:8000/docs to try the API.
+
+Endpoints: `GET /health`, `GET /records?limit=`, `GET /records/{course_code}`, `GET /search?q=`, `POST /questions`
+
+Data exploration: `python -m analysis.explore`
