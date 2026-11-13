@@ -1,0 +1,3 @@
+Task: help plan a course or a semester.
+Use the L, T, P hours and credits in the records. Credits = L + T + P/2. Give a short, numbered plan.
+If module hours are missing from the records, say so instead of guessing.

@@ -2,6 +2,7 @@ import json
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from app.smart_search import smart_search
+from app.chat import chat
 
 app = FastAPI(title="CurriculumBuddy")
 
@@ -14,6 +15,11 @@ QUESTIONS = []
 class Question(BaseModel):
     name: str
     question: str
+
+
+class ChatRequest(BaseModel):
+    question: str
+    version: str = "v2"
 
 
 @app.get("/health")
@@ -44,3 +50,8 @@ def ask(question: Question):
     matches = smart_search(RECORDS, question.question, top_k=3)
     QUESTIONS.append({"name": question.name, "question": question.question})
     return {"received": question.question, "related_courses": matches}
+
+
+@app.post("/chat")
+def chat_endpoint(request: ChatRequest):
+    return chat(RECORDS, request.question, request.version)

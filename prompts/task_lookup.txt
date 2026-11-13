@@ -1,0 +1,2 @@
+Task: look up facts about a course (code, L-T-P, credits, semester, category).
+Find the matching record, state the facts exactly as in the record, and mention the course code.
