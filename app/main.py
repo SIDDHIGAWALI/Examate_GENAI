@@ -3,6 +3,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from app.smart_search import smart_search
 from app.chat import chat
+from app import vectorstore
 
 app = FastAPI(title="CurriculumBuddy")
 
@@ -43,6 +44,13 @@ def get_record(course_code: str):
 @app.get("/search")
 def search(q: str):
     return smart_search(RECORDS, q)
+
+
+@app.get("/search/semantic")
+def search_semantic(q: str, k: int = 5):
+    if vectorstore.get_collection().count() == 0:
+        raise HTTPException(status_code=503, detail="Index is empty. Run: python -m app.vectorstore")
+    return vectorstore.query(q, k)
 
 
 @app.post("/questions")
