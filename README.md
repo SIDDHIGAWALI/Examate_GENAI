@@ -32,3 +32,25 @@ Open http://127.0.0.1:8000/docs to try the API.
 Endpoints: `GET /health`, `GET /records?limit=`, `GET /records/{course_code}`, `GET /search?q=`, `POST /questions`
 
 Data exploration: `python -m analysis.explore`
+
+## RAG Evaluation (Sprint 2)
+
+**Winner: k=5** — Avg Score: **0.41**
+
+| ID | Question | Expected | Got | Score |
+|----|----------|----------|-----|-------|
+| Q1 | What are the L-T-P and credits of Data Structure a | L=3 T=0 P=4 Credits=5 | L‑T‑P: 3L:0T:4P, Credits: 5 | 0.0 |
+| Q2 | Which semester is Data Structure and Algorithms in | Semester 3 | I don't know. | 0.0 |
+| Q3 | What is the category of Mathematics-I? | BSC | I don't know. | 0.0 |
+| Q4 | How many credits does Engineering Graphics and Des | 3 | 3 | 1.0 |
+| Q5 | Which Semester III courses have a practical compon | Analog Electronic Circuits, Da | KEE201/ KCS201 Basic Electrical Engineer | 0.0 |
+| Q6 | What is the syllabus of Savitribai Phule Pune Univ | I don't know | I don't know. | 1 |
+| Q7 | What is the total number of credits in Semester II | 23 | I don't know. | 0.0 |
+| Q8 | Which courses are audit courses with 0 credits? | AU-101 IDEA Lab Workshop and A | ERROR: 429 {"error":{"message":"Rate lim | 0.22 |
+| Q9 | What is the L-T-P of Basic Electrical Engineering? | L=3 T=1 P=2 | 3L:1T:2P | 0.0 |
+| Q10 | How many credits does Mathematics-II have? | 4 | ERROR: 429 {"error":{"message":"Rate lim | 1.0 |
+| Q11 | What is the course code for Digital Electronics? | ESC-302 | ESC-302 | 1.0 |
+| Q12 | Which branch is Programming for Problem Solving in | CSE | Computer Science and Engineering | 0.0 |
+| Q13 | What is the GATE syllabus for Computer Science? | I don't know | I don't know. | 1 |
+| Q14 | How many courses are in Semester I? | 6 | ERROR: 429 {"error":{"message":"Rate lim | 1.0 |
+| Q15 | What is the category of IT Workshop? | PCC | I don't know. | 0.0 |

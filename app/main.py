@@ -4,7 +4,8 @@ from pydantic import BaseModel
 from app.smart_search import smart_search
 from app.chat import chat
 from app import vectorstore
-
+from app.rag import router as rag_router      # add at top
+app.include_router(rag_router)                 # add after app = FastAPI(...)
 app = FastAPI(title="CurriculumBuddy")
 
 with open("data/records.json", encoding="utf-8") as f:

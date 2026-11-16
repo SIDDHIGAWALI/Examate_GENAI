@@ -1,0 +1,17 @@
+[
+  {"id":"Q1", "question":"What are the L-T-P and credits of Data Structure and Algorithms?", "expected":"L=3 T=0 P=4 Credits=5", "answerable":true},
+  {"id":"Q2", "question":"Which semester is Data Structure and Algorithms in?", "expected":"Semester 3", "answerable":true},
+  {"id":"Q3", "question":"What is the category of Mathematics-I?", "expected":"BSC", "answerable":true},
+  {"id":"Q4", "question":"How many credits does Engineering Graphics and Design have?", "expected":"3", "answerable":true},
+  {"id":"Q5", "question":"Which Semester III courses have a practical component?", "expected":"Analog Electronic Circuits, Data Structure and Algorithms, Digital Electronics, IT Workshop", "answerable":true},
+  {"id":"Q6", "question":"What is the syllabus of Savitribai Phule Pune University for TE Computer 2019 pattern?", "expected":"I don't know", "answerable":false},
+  {"id":"Q7", "question":"What is the total number of credits in Semester II?", "expected":"23", "answerable":true},
+  {"id":"Q8", "question":"Which courses are audit courses with 0 credits?", "expected":"AU-101 IDEA Lab Workshop and AU-102 Sports and Yoga", "answerable":true},
+  {"id":"Q9", "question":"What is the L-T-P of Basic Electrical Engineering?", "expected":"L=3 T=1 P=2", "answerable":true},
+  {"id":"Q10","question":"How many credits does Mathematics-II have?", "expected":"4", "answerable":true},
+  {"id":"Q11","question":"What is the course code for Digital Electronics?", "expected":"ESC-302", "answerable":true},
+  {"id":"Q12","question":"Which branch is Programming for Problem Solving in?", "expected":"CSE", "answerable":true},
+  {"id":"Q13","question":"What is the GATE syllabus for Computer Science?", "expected":"I don't know", "answerable":false},
+  {"id":"Q14","question":"How many courses are in Semester I?", "expected":"6", "answerable":true},
+  {"id":"Q15","question":"What is the category of IT Workshop?", "expected":"PCC", "answerable":true}
+]
