@@ -54,3 +54,14 @@ Data exploration: `python -m analysis.explore`
 | Q13 | What is the GATE syllabus for Computer Science? | I don't know | I don't know. | 1 |
 | Q14 | How many courses are in Semester I? | 6 | ERROR: 429 {"error":{"message":"Rate lim | 1.0 |
 | Q15 | What is the category of IT Workshop? | PCC | I don't know. | 0.0 |
+
+<!-- EVAL:START -->
+## Evaluation (15 questions, 2 configs)
+
+| Config | Chunk size | Top-k | Retrieval hit | Answer accuracy | Correct "I don't know" | Cited | Avg seconds |
+|---|---|---|---|---|---|---|---|
+| A | 1000 | 3 | 64% | 0% | 0% | 0% | 0.6 |
+| B (winner) | 500 | 6 | 82% | 0% | 0% | 0% | 0.6 |
+
+Winner: config B (chunk size 500, top-k 6). Details: `eval/results.md`.
+<!-- EVAL:END -->

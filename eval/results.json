@@ -1,0 +1,300 @@
+{
+  "summaries": [
+    {
+      "config": "A",
+      "chunk_size": 1000,
+      "top_k": 3,
+      "retrieval": 64,
+      "accuracy": 0,
+      "idk": 0,
+      "cited": 0,
+      "seconds": 0.6
+    },
+    {
+      "config": "B",
+      "chunk_size": 500,
+      "top_k": 6,
+      "retrieval": 82,
+      "accuracy": 0,
+      "idk": 0,
+      "cited": 0,
+      "seconds": 0.6
+    }
+  ],
+  "details": {
+    "A": [
+      {
+        "id": 1,
+        "answerable": true,
+        "retrieved": false,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.8,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 2,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 1.1,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 3,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 4,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.5,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 5,
+        "answerable": false,
+        "retrieved": null,
+        "correct": false,
+        "cited": null,
+        "seconds": 0.4,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 6,
+        "answerable": false,
+        "retrieved": null,
+        "correct": false,
+        "cited": null,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 7,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.5,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 8,
+        "answerable": true,
+        "retrieved": false,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.5,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 9,
+        "answerable": true,
+        "retrieved": false,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 10,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.5,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 11,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 12,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.7,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 13,
+        "answerable": true,
+        "retrieved": false,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.4,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 14,
+        "answerable": false,
+        "retrieved": null,
+        "correct": false,
+        "cited": null,
+        "seconds": 0.5,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 15,
+        "answerable": false,
+        "retrieved": null,
+        "correct": false,
+        "cited": null,
+        "seconds": 0.7,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      }
+    ],
+    "B": [
+      {
+        "id": 1,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 2,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.7,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 3,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.4,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 4,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.4,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 5,
+        "answerable": false,
+        "retrieved": null,
+        "correct": false,
+        "cited": null,
+        "seconds": 0.5,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 6,
+        "answerable": false,
+        "retrieved": null,
+        "correct": false,
+        "cited": null,
+        "seconds": 0.5,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 7,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 8,
+        "answerable": true,
+        "retrieved": false,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.7,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 9,
+        "answerable": true,
+        "retrieved": false,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 10,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 11,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 12,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 13,
+        "answerable": true,
+        "retrieved": true,
+        "correct": false,
+        "cited": false,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 14,
+        "answerable": false,
+        "retrieved": null,
+        "correct": false,
+        "cited": null,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      },
+      {
+        "id": 15,
+        "answerable": false,
+        "retrieved": null,
+        "correct": false,
+        "cited": null,
+        "seconds": 0.6,
+        "answer": "LLM call failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/completions (Caused by NameResolutionError(\"HTTPSConnection(host='api.groq.com', port=443): Failed to resolve 'api.groq.com' ([Errno 11001] getaddrinfo failed)\"))"
+      }
+    ]
+  }
+}

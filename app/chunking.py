@@ -61,20 +61,18 @@ def chunk_pdf(path, max_chars=MAX_CHARS):
     save_chunk()
     return chunks
 
-
-def chunk_all(folder=RAW_FOLDER):
+def chunk_all(folder=RAW_FOLDER, max_chars=MAX_CHARS):
     all_chunks = []
     for name in sorted(os.listdir(folder)):
         if not name.lower().endswith(".pdf"):
             continue
         try:
-            found = chunk_pdf(os.path.join(folder, name))
+            found = chunk_pdf(os.path.join(folder, name), max_chars)
             print(name, "->", len(found), "chunks")
             all_chunks = all_chunks + found
         except Exception as e:
             print("Skipped", name, "-", e)
     return all_chunks
-
 
 if __name__ == "__main__":
     chunks = chunk_all()

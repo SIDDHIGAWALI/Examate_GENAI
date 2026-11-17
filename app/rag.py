@@ -1,52 +1,41 @@
-import json
-from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
-from app.vectorstore import get_collection, query as vs_query
+import re
 from app.llm import ask_llm
-
-router = APIRouter()
-
-RAG_SYSTEM = """You are CurriculumBuddy. Answer ONLY from the CONTEXT CHUNKS below.
-If the chunks do not contain the answer, say exactly: "I don't know."
-Never invent facts. Keep it short.
-Reply as JSON: {"answer": "...", "sources": [{"source": "...", "page": 1}]}"""
+from app import vectorstore
 
 
-class AskRequest(BaseModel):
-    question: str
-    k: int = 5
+def read_prompt(name):
+    with open("prompts/" + name, encoding="utf-8") as f:
+        return f.read()
 
 
-@router.post("/ask")
-def ask(req: AskRequest):
-    col = get_collection()
-    if col.count() == 0:
-        raise HTTPException(503, "Index empty. Run: python -m app.vectorstore")
+def is_unknown(answer):
+    text = answer.lower().replace("\u2019", "'")
+    return "i don't know" in text
 
-    hits = vs_query(req.question, k=req.k)
 
-    context = ""
-    for i, h in enumerate(hits, 1):
-        context += f"[{i}] {h['source']} p{h['page']}\n{h['text']}\n\n"
+def answer(question, k=3, collection=vectorstore.COLLECTION):
+    # 1. find the best chunks
+    hits = vectorstore.query(question, k=k, name=collection, max_chars=None)
 
-    prompt = f"QUESTION: {req.question}\n\nCONTEXT CHUNKS:\n{context}"
+    # 2. give them to the LLM, numbered, so it can cite them
+    parts = []
+    for number, h in enumerate(hits, start=1):
+        parts.append(f"[{number}] ({h['source']}, page {h['page']}, {h['title']})\n{h['text']}")
+    user = "QUESTION: " + question + "\n\nCHUNKS:\n\n" + "\n\n".join(parts)
+
+    retrieved = [{"source": h["source"], "page": h["page"], "title": h["title"], "score": h["score"]} for h in hits]
 
     try:
-        raw = ask_llm(RAG_SYSTEM, prompt)
+        reply = ask_llm(read_prompt("rag_system.txt"), user).strip()
     except Exception as e:
-        raise HTTPException(502, f"LLM failed: {e}")
+        return {"answer": "LLM call failed: " + str(e), "citations": [], "retrieved": retrieved}
 
-    # parse JSON reply
-    clean = raw.strip().strip("`")
-    if clean.lower().startswith("json"):
-        clean = clean[4:]
-    try:
-        data = json.loads(clean)
-    except Exception:
-        data = {"answer": clean, "sources": []}
-
-    return {
-        "question": req.question,
-        "answer": data.get("answer", clean),
-        "sources": data.get("sources", []),
-    }
+    # 3. turn the [1] [2] markers into citations
+    citations = []
+    if not is_unknown(reply):
+        numbers = sorted(set(int(n) for n in re.findall(r"\[(\d+)\]", reply)))
+        for n in numbers:
+            if 1 <= n <= len(hits):
+                h = hits[n - 1]
+                citations.append({"source": h["source"], "page": h["page"], "title": h["title"]})
+    return {"answer": reply, "citations": citations, "retrieved": retrieved}
