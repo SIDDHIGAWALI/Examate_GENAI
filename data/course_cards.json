@@ -1,0 +1,661 @@
+{
+ "BSC-101": {
+  "modules": [
+   {
+    "name": "Electrostatics in vacuum",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Electrostatics in a linear dielectric medium",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Magneto statics",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Magneto statics in a linear magnetic medium",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Faraday's law",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Displacement current and time-dependent fields",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Electromagnetic waves",
+    "hours": null,
+    "unit": null
+   }
+  ],
+  "prerequisites": [],
+  "note": "AICTE lists four Physics-I options. This card shows option 1 (Introduction to Electromagnetic Theory). AICTE states the prerequisite as a mathematics course with vector calculus (Mathematics-I runs in the same semester)."
+ },
+ "BSC-102": {
+  "modules": [
+   {
+    "name": "Basic Calculus",
+    "hours": 6,
+    "unit": "hours"
+   },
+   {
+    "name": "Single-variable Calculus (Differentiation)",
+    "hours": 6,
+    "unit": "hours"
+   },
+   {
+    "name": "Sequences and series",
+    "hours": 10,
+    "unit": "hours"
+   },
+   {
+    "name": "Multivariable Calculus (Differentiation)",
+    "hours": 8,
+    "unit": "hours"
+   },
+   {
+    "name": "Multivariable Calculus (Integration)",
+    "hours": 10,
+    "unit": "hours"
+   }
+  ],
+  "prerequisites": [],
+  "note": ""
+ },
+ "ESC-101": {
+  "modules": [
+   {
+    "name": "DC circuits",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Single phase AC circuits",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Transformers",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "DC machines",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Three phase induction motors",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Sources of electrical power",
+    "hours": null,
+    "unit": null
+   }
+  ],
+  "prerequisites": [],
+  "note": ""
+ },
+ "ESC-102": {
+  "modules": [
+   {
+    "name": "Introduction to engineering drawing",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Orthographic projections",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Projections of regular solids",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Sections and sectional views of right angular solids",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Isometric projections",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Overview of computer graphics",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Customisation and CAD drawing",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Annotations, layering and other functions",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Demonstration of a simple team design project",
+    "hours": null,
+    "unit": null
+   }
+  ],
+  "prerequisites": [],
+  "note": ""
+ },
+ "HSMC-102": {
+  "modules": [
+   {
+    "name": "An insight to learning",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Remembering memory",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Emotions: experience and expression",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Basics of design thinking",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Being ingenious and fixing problems",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Process of product design",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Prototyping and testing",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Celebrating the difference",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Design thinking and customer centricity",
+    "hours": null,
+    "unit": null
+   }
+  ],
+  "prerequisites": [],
+  "note": "AICTE lists nine units without durations."
+ },
+ "AU-101": {
+  "modules": [],
+  "prerequisites": [],
+  "note": "AICTE gives a numbered topic list for the IDEA Lab, not modules with durations."
+ },
+ "BSC-202": {
+  "modules": [
+   {
+    "name": "Atomic and molecular structure",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Spectroscopic techniques and applications",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Intermolecular forces and potential energy surfaces",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Use of free energy in chemical equilibria",
+    "hours": 6,
+    "unit": "lectures"
+   },
+   {
+    "name": "Periodic properties",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Stereochemistry",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Organic reactions and synthesis of a drug molecule",
+    "hours": null,
+    "unit": null
+   }
+  ],
+  "prerequisites": [],
+  "note": "AICTE gives a duration only for module 4 (6 lectures)."
+ },
+ "BSC-201": {
+  "modules": [
+   {
+    "name": "Matrices",
+    "hours": 10,
+    "unit": "hours"
+   },
+   {
+    "name": "First order ordinary differential equations",
+    "hours": 6,
+    "unit": "hours"
+   },
+   {
+    "name": "Ordinary differential equations of higher orders",
+    "hours": 8,
+    "unit": "hours"
+   },
+   {
+    "name": "Complex variable: differentiation",
+    "hours": 8,
+    "unit": "hours"
+   },
+   {
+    "name": "Complex variable: integration",
+    "hours": 8,
+    "unit": "hours"
+   }
+  ],
+  "prerequisites": [
+   {
+    "code": "BSC-102",
+    "basis": "inferred: Mathematics-II follows Mathematics-I"
+   }
+  ],
+  "note": ""
+ },
+ "ESC-201": {
+  "modules": [
+   {
+    "name": "Introduction to programming",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Arithmetic expressions and precedence",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Conditional branching and loops",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Arrays and strings",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Basic algorithms (searching, sorting)",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Functions",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Recursion",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Structures",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Pointers",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "File handling",
+    "hours": null,
+    "unit": null
+   }
+  ],
+  "prerequisites": [],
+  "note": ""
+ },
+ "HSMC-201": {
+  "modules": [
+   {
+    "name": "Vocabulary building",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Basic writing skills",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Identifying common errors in writing",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Nature and style of sensible writing",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Writing practices",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Oral communication",
+    "hours": null,
+    "unit": null
+   }
+  ],
+  "prerequisites": [],
+  "note": ""
+ },
+ "ESC-202": {
+  "modules": [
+   {
+    "name": "Manufacturing methods: casting, forming, machining, joining",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "CNC machining and additive manufacturing",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Fitting operations and power tools",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Electrical and electronics",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Carpentry",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Plastic moulding and glass cutting",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Metal casting",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Welding and brazing",
+    "hours": null,
+    "unit": null
+   }
+  ],
+  "prerequisites": [],
+  "note": ""
+ },
+ "AU-102": {
+  "modules": [
+   {
+    "name": "Introduction to physical education",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Olympic movement",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Physical fitness, wellness and lifestyle",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Anatomy and physiology in physical education and sports",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Kinesiology, biomechanics and sports",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Postures",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Yoga",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Yoga and lifestyle",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Training and planning in sports",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Psychology and sports",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Doping",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Sports medicine",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Sports and games",
+    "hours": null,
+    "unit": null
+   }
+  ],
+  "prerequisites": [],
+  "note": ""
+ },
+ "HSMC(H-102)": {
+  "modules": [
+   {
+    "name": "Introduction to value education",
+    "hours": 6,
+    "unit": "lectures"
+   },
+   {
+    "name": "Harmony in the human being",
+    "hours": 6,
+    "unit": "lectures"
+   },
+   {
+    "name": "Harmony in the family and society",
+    "hours": 6,
+    "unit": "lectures"
+   },
+   {
+    "name": "Harmony in nature and existence",
+    "hours": 4,
+    "unit": "lectures"
+   },
+   {
+    "name": "Implications of the holistic understanding: professional ethics",
+    "hours": 6,
+    "unit": "lectures"
+   }
+  ],
+  "prerequisites": [],
+  "note": "AICTE states: no prerequisite; Universal Human Values 1 (the induction programme) is desirable."
+ },
+ "ESC-301": {
+  "modules": [],
+  "prerequisites": [
+   {
+    "code": "ESC-101",
+    "basis": "inferred: circuits build on Basic Electrical Engineering"
+   }
+  ],
+  "note": "The AICTE document gives only the course table entry, no module list."
+ },
+ "CS-301": {
+  "modules": [
+   {
+    "name": "Introduction and basic terminology",
+    "hours": 1,
+    "unit": "weeks"
+   },
+   {
+    "name": "Abstract data types: arrays, linked lists, stacks, queues, dictionary, trees",
+    "hours": 2.5,
+    "unit": "weeks"
+   },
+   {
+    "name": "Priority queues and heaps",
+    "hours": 1,
+    "unit": "weeks"
+   },
+   {
+    "name": "Binary search trees, AVL trees, 2-4 trees",
+    "hours": 3,
+    "unit": "weeks"
+   },
+   {
+    "name": "Hash tables, tries",
+    "hours": 2,
+    "unit": "weeks"
+   },
+   {
+    "name": "Sorting, selection",
+    "hours": 1.5,
+    "unit": "weeks"
+   },
+   {
+    "name": "Graphs: representations, traversal, BFS and DFS",
+    "hours": 2.5,
+    "unit": "weeks"
+   },
+   {
+    "name": "Amortized complexity (desirable)",
+    "hours": 1,
+    "unit": "weeks"
+   },
+   {
+    "name": "Randomization in data structures (desirable)",
+    "hours": 1,
+    "unit": "weeks"
+   }
+  ],
+  "prerequisites": [
+   {
+    "code": "ESC-201",
+    "basis": "inferred: data structures are programmed using Programming for Problem Solving"
+   }
+  ],
+  "note": "The last two modules are the desirable (optional) ones in the AICTE table."
+ },
+ "ESC-302": {
+  "modules": [],
+  "prerequisites": [
+   {
+    "code": "ESC-101",
+    "basis": "inferred: digital circuits build on Basic Electrical Engineering"
+   }
+  ],
+  "note": "The AICTE document gives only the course table entry, no module list."
+ },
+ "CS-302": {
+  "modules": [],
+  "prerequisites": [
+   {
+    "code": "ESC-201",
+    "basis": "inferred: MATLAB/Scilab work needs programming basics"
+   }
+  ],
+  "note": "The AICTE document gives only the course table entry, no module list."
+ },
+ "BSC-301": {
+  "modules": [
+   {
+    "name": "Partial differential equations",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Numerical methods",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Transform calculus",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Discrete mathematics",
+    "hours": null,
+    "unit": null
+   },
+   {
+    "name": "Probability and statistics",
+    "hours": null,
+    "unit": null
+   }
+  ],
+  "prerequisites": [
+   {
+    "code": "BSC-201",
+    "basis": "inferred: Mathematics-III follows Mathematics-II"
+   }
+  ],
+  "note": "AICTE calls this a need-based course: modules are chosen per branch from these five topics. No durations are given."
+ },
+ "HSMC-301": {
+  "modules": [],
+  "prerequisites": [],
+  "note": "The AICTE document gives only the course table entry, no module list."
+ }
+}

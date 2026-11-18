@@ -41,6 +41,9 @@ def parse_decision(text):
     match = re.search(r"\{.*\}", cleaned, re.DOTALL)
     try:
         data = json.loads(match.group(0))
+        # the model sometimes answers in tool-call shape: {"name": ..., "arguments": {...}}
+        if "action" not in data and data.get("name") in TOOLS:
+            return {"action": data["name"], "input": data.get("arguments") or {}, "answer": ""}
         return {
             "action": str(data.get("action", "final")),
             "input": data.get("input") or {},
@@ -68,6 +71,13 @@ def decide(question, history, observations):
     try:
         reply = ask_llm(read_prompt("agent_system.txt"), build_prompt(question, history, observations))
     except Exception as e:
+        # The provider rejects tool-shaped replies but includes them in the error text: recover the intent.
+        match = re.search(r'"name":\s*"(\w+)",\s*"arguments":\s*(\{.*?\})\s*\}', str(e).replace('\\"', '"'), re.DOTALL)
+        if match and match.group(1) in TOOLS:
+            try:
+                return {"action": match.group(1), "input": json.loads(match.group(2)), "answer": ""}
+            except Exception:
+                pass
         return {"action": "final", "input": {}, "answer": "LLM call failed: " + str(e)}
     return parse_decision(reply)
 

@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from app.smart_search import smart_search
@@ -13,6 +14,7 @@ with open("data/records.json", encoding="utf-8") as f:
     RECORDS = json.load(f)
 
 QUESTIONS = []
+FEEDBACK_PATH = "data/feedback.jsonl"
 
 
 class Question(BaseModel):
@@ -48,6 +50,13 @@ def ask(question: Question):
     matches = smart_search(RECORDS, question.question, top_k=3)
     QUESTIONS.append({"name": question.name, "question": question.question})
     return {"received": question.question, "related_courses": matches}
+
+
+class Feedback(BaseModel):
+    question: str
+    answer: str
+    rating: str          # "up" or "down"
+    mode: str = "ask"
 
 
 class AskRequest(BaseModel):
@@ -106,3 +115,14 @@ def agent_endpoint(request: AgentRequest):
                 "how_to_continue": "POST /agent again with the same thread_id and approve true or false"}
     return {"status": "done", "thread_id": request.thread_id,
             "answer": result["answer"], "tools_used": result["observations"]}
+
+
+@app.post("/feedback")
+def save_feedback(feedback: Feedback):
+    if feedback.rating not in ("up", "down"):
+        raise HTTPException(status_code=422, detail="rating must be 'up' or 'down'")
+    row = feedback.model_dump()
+    row["time"] = datetime.now().isoformat(timespec="seconds")
+    with open(FEEDBACK_PATH, "a", encoding="utf-8") as f:
+        f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    return {"saved": True}
