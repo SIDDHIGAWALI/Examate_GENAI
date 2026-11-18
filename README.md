@@ -65,3 +65,17 @@ Data exploration: `python -m analysis.explore`
 
 Winner: config B (chunk size 500, top-k 6). Details: `eval/results.md`.
 <!-- EVAL:END -->
+
+## Tests
+
+Run all tests from the project root:
+
+```
+python -m pytest -q
+```
+
+28 tests cover:
+- the L-T-P credit calculator: AICTE mapping, semester totals, audit-course mismatches and input validation
+- the agent: tool calling, unknown tools, the 5-step limit, LLM failure, and the LangGraph approval step, rejection and per-thread memory
+
+The agent tests use a fake LLM, so they need no API key and no internet.

@@ -1,6 +1,7 @@
 import json
 
 RECORDS_PATH = "data/records.json"
+MAX_HOURS = 20   # no course has more than 20 hours of L, T or P per week
 
 
 def calculate_course(l, t, p, listed_credits=None):
@@ -51,13 +52,32 @@ def calculate_semester(semester):
     }
 
 
+def read_hours(name, value):
+    # turn the value into a number and reject bad input
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        raise ValueError(name + " must be a number, got " + repr(value))
+    if number < 0:
+        raise ValueError(name + " cannot be negative")
+    if number > MAX_HOURS:
+        raise ValueError(name + " is too large (maximum " + str(MAX_HOURS) + " hours per week)")
+    return number
+
+
 def ltp_credit_calculator(l=None, t=None, p=None, listed_credits=None, semester=None):
     try:
         if semester is not None:
-            return calculate_semester(int(semester))
+            semester = int(semester)
+            if semester < 1 or semester > 8:
+                raise ValueError("semester must be between 1 and 8")
+            return calculate_semester(semester)
         if l is None or t is None or p is None:
             return {"error": "give l, t and p (hours per week), or give a semester number"}
-        return calculate_course(float(l), float(t), float(p), None if listed_credits is None else float(listed_credits))
+        listed = None
+        if listed_credits is not None:
+            listed = read_hours("listed_credits", listed_credits)
+        return calculate_course(read_hours("l", l), read_hours("t", t), read_hours("p", p), listed)
     except Exception as e:
         return {"error": str(e)}
 
