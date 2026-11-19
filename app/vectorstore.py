@@ -1,4 +1,5 @@
 import chromadb
+
 from app import embed
 from app.chunking import chunk_all
 

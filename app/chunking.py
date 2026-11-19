@@ -1,5 +1,6 @@
 import os
 import re
+
 from pypdf import PdfReader
 
 RAW_FOLDER = "data/raw"

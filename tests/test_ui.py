@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from streamlit.testing.v1 import AppTest
 
 APP = str(Path(__file__).resolve().parent.parent / "ui" / "app.py")

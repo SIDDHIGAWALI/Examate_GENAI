@@ -1,4 +1,5 @@
 import json
+
 from app.chat import chat
 
 with open("data/records.json", encoding="utf-8") as f:

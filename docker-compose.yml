@@ -1,0 +1,31 @@
+services:
+  api:
+    build: .
+    image: curriculumbuddy:latest
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - chroma_cache:/root/.cache/chroma
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  ui:
+    image: curriculumbuddy:latest
+    command: streamlit run ui/app.py --server.address=0.0.0.0 --server.port=8501 --server.headless=true
+    ports:
+      - "8501:8501"
+    environment:
+      - CURRICULUMBUDDY_API=http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  chroma_cache:

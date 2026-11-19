@@ -79,3 +79,7 @@ python -m pytest -q
 - the agent: tool calling, unknown tools, the 5-step limit, LLM failure, and the LangGraph approval step, rejection and per-thread memory
 
 The agent tests use a fake LLM, so they need no API key and no internet.
+
+## Run with Docker
+...
+Status: Dockerfile and compose written; the image build was blocked by network timeouts on my machine, so the full run is untested.

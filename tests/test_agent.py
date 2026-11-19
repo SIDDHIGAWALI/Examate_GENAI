@@ -1,9 +1,10 @@
 import json
+
 import pytest
+from langgraph.types import Command
 
 from app import agent_loop
 from app.graph import build_graph
-from langgraph.types import Command
 
 CALC_SEM2 = json.dumps({"action": "ltp_credit_calculator", "input": {"semester": 2}, "answer": ""})
 FINAL = json.dumps({"action": "final", "input": {}, "answer": "Semester 2 has 23 credits."})
@@ -51,7 +52,8 @@ def test_loop_calls_calculator_then_answers(monkeypatch):
 
 
 def test_loop_can_use_search_tool(monkeypatch):
-    fake_search = lambda question: {"answer": "CS-301 [1]", "citations": [{"page": 85}]}
+    def fake_search(question):
+        return {"answer": "CS-301 [1]", "citations": [{"page": 85}]}
     monkeypatch.setitem(agent_loop.TOOLS, "search_curriculum", fake_search)
     ask = json.dumps({"action": "search_curriculum", "input": {"question": "DSA credits"}, "answer": ""})
     monkeypatch.setattr(agent_loop, "ask_llm", scripted_llm([ask, FINAL]))

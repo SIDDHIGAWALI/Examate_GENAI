@@ -1,4 +1,5 @@
 import json
+
 from app.llm import ask_llm
 from app.smart_search import smart_search
 

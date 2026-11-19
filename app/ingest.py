@@ -1,6 +1,8 @@
 import json
 from dataclasses import asdict
+
 from pypdf import PdfReader
+
 from app.models import Record
 
 # 1. read the PDF into a list of text lines

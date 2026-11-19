@@ -1,9 +1,9 @@
 import json
+
 from fastapi.testclient import TestClient
 
-from ui import cards as cardlib
 from app import main
-
+from ui import cards as cardlib
 
 RECORDS = cardlib.load_records()
 CARDS = cardlib.load_cards()

@@ -1,4 +1,5 @@
 import json
+
 import pandas as pd
 
 with open("data/records.json", encoding="utf-8") as f:

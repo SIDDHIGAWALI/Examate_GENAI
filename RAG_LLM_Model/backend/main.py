@@ -33,3 +33,5 @@ def getCollectionData():
 def getResponse(query: ChatInput):
     response = findResponse(query.prompt)
     return {"response": response}
+
+

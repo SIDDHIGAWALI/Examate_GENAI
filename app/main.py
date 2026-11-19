@@ -1,12 +1,14 @@
 import json
 from datetime import datetime
+
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from app.smart_search import smart_search
-from app.chat import chat
-from app import vectorstore, rag
-from app.graph import graph
 from langgraph.types import Command
+from pydantic import BaseModel
+
+from app import rag, vectorstore
+from app.chat import chat
+from app.graph import graph
+from app.smart_search import smart_search
 
 app = FastAPI(title="CurriculumBuddy")
 
