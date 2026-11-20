@@ -57,6 +57,12 @@ def test_ask_uses_fake_answer(monkeypatch):
     def fake_answer(question, *args, **kwargs):
         return {"answer": "FAKE ANSWER [1]", "citations": [], "retrieved": []}
 
+    class FakeCollection:
+        def count(self):
+            return 1
+
+    # CI has no built vector index, so stub the "index is empty" guard as well.
+    monkeypatch.setattr("app.vectorstore.get_collection", lambda *a, **k: FakeCollection())
     monkeypatch.setattr("app.rag.answer", fake_answer)
     r = client.post("/ask", json={"question": "How many credits is CS-301?"})
     assert r.status_code == 200

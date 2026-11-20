@@ -1,7 +1,7 @@
 # sanjivani-sj-27-curriculumbuddy
 
 # CurriculumBuddy
-
+![CI](https://github.com/SIDDHIGAWALI/Examate_GENAI/actions/workflows/ci.yml/badge.svg)
 ## Product
 Q&A over AICTE model curricula for UG engineering: course contents module by module, L-T-P and credits, prerequisites, outcomes and suggested textbooks.
 
