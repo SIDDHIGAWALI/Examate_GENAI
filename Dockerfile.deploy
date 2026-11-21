@@ -11,8 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN python -m app.fetch \
-    && python -m app.ingest \
+RUN python -m app.ingest \
     && python -m app.build_cards \
     && python -c "from app import vectorstore; vectorstore.index_all()"
 

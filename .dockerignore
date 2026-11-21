@@ -7,6 +7,5 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 RAG_LLM_Model/
-data/raw/
 data/chroma/
 data/feedback.jsonl
