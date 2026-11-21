@@ -83,3 +83,7 @@ The agent tests use a fake LLM, so they need no API key and no internet.
 ## Run with Docker
 ...
 Status: Dockerfile and compose written; the image build was blocked by network timeouts on my machine, so the full run is untested.
+
+## Live demo
+API: https://curriculumbuddy.onrender.com (try `/health` and `/docs`)
+Note: Render free tier; the service sleeps after 15 minutes idle, so the first request can take about a minute.
