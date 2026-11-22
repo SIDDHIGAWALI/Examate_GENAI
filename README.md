@@ -3,7 +3,7 @@
 
 **Ask the AICTE curriculum a question and get a cited answer in seconds, or an honest "I don't know."**
 
-Live API: https://curriculumbuddy.onrender.com (`/health`, `/docs`, `/metrics`) · Demo video: <<VIDEO LINK>>
+Live API: https://curriculumbuddy.onrender.com (`/health`, `/docs`, `/metrics`) · Demo video: ![CI](https://drive.google.com/file/d/1avkSSLTpxMx1tdZK-sDYsfIeLLJ2nRzF/view?usp=sharing)
 
 ## The problem
 A new assistant professor at Sanjivani has to prepare a course plan for "Design and Analysis of Algorithms" aligned with the AICTE model curriculum. The facts are buried in 100+ page PDFs: course tables, module lists, book lists. Finding the L-T-P, credits, modules and prerequisites of one course means scrolling, and a wrong number in a course plan is expensive.
