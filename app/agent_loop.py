@@ -2,7 +2,7 @@ import json
 import re
 
 from app import rag
-from app.llm import ask_llm
+from app.metrics import ask_llm
 from app.tools import ltp_credit_calculator
 
 MAX_STEPS = 5
