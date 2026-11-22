@@ -10,7 +10,10 @@ from app.chat import chat
 from app.graph import graph
 from app.smart_search import smart_search
 
+from app import metrics
+
 app = FastAPI(title="CurriculumBuddy")
+metrics.install(app)
 
 with open("data/records.json", encoding="utf-8") as f:
     RECORDS = json.load(f)
