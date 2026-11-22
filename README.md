@@ -41,7 +41,14 @@ flowchart LR
 
 ## Results
 <!-- EVAL:START -->
-Run `python -m eval.run_eval` to fill this table.
+## Evaluation (15 questions, 2 configs)
+
+| Config | Chunk size | Top-k | Retrieval hit | Answer accuracy | Correct "I don't know" | Cited | Avg seconds |
+|---|---|---|---|---|---|---|---|
+| A | 1000 | 3 | 64% | 47% | 100% | 45% | 2.6 |
+| B (winner) | 500 | 6 | 82% | 47% | 100% | 55% | 9.1 |
+
+Winner: config B (chunk size 500, top-k 6). It retrieves the right chunk more often and cites more, with the same answer accuracy as A, but is slower because it sends more text to the model. Details: `eval/results.md`.
 <!-- EVAL:END -->
 
 15 questions, 2 retrieval configs (chunk size and top-k). One question asks for something the documents cannot answer (Savitribai Phule Pune University syllabus), to check that the assistant refuses. Details: `eval/results.md`. Prompt versions compared in `eval/prompt_compare.md`.
